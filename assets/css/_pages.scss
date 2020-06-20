@@ -1,0 +1,938 @@
+@import "variables", "mixins", "_reset", "_normalize";
+
+//nav section
+html {
+  scroll-behavior: smooth;
+}
+
+.nav_wrapper {
+  background-color: #ffffff91;
+  padding-top: 10px;
+
+  @include max(767px) {
+    display:none;
+  }
+
+  span {
+    color: black;
+  }
+}
+
+.head_logo {
+  img {
+    width: 20%;
+
+    @include max(575px) {
+      width: 120px;
+    }
+  }
+}
+
+.main_nav {
+  justify-content: center;
+  .nav_right {
+    li {
+      a {
+        color: black !important;
+        font-weight: 500;
+        margin-right: 25px;
+        font-family: black;
+        font: 20px $fr;
+        font-weight: 400;
+        @include transition(0.3s linear);
+
+        &:hover {
+          color: black !important;
+          font-weight: bold;
+        }
+        @include max(991px) {
+          margin-bottom: 20px;
+          font: 15px $fr;
+        }  
+      }
+
+      button {
+        background-color: blue;
+        color: white;
+        border: none;
+        border-radius: 40px;
+        padding: 10px 30px;
+        font-size: 12px;
+        font-family: black;
+        transition: 0.2s ease-in;
+        letter-spacing: 3px;
+
+        &:hover {
+          background: #dc5b33;
+        }
+
+        @include max(991px) {
+          margin-bottom: 20px;
+        }
+      }
+    }
+
+    .active {
+      >a {
+        color: black !important;
+        font-weight: bold;
+
+        button {
+          background: black;
+
+          &:hover {
+            background: #dc5b33;
+          }
+        }
+      }
+    }
+
+    .nav_dropdown {
+      .nav_dropdown_menu {
+        border-radius: 0;
+        border: none;
+        padding: 15px;
+        box-shadow: 0 2px 3px rgba(40, 40, 40, 0.06);
+
+        a {
+          display: flex;
+
+          &:active {
+            background-color: transparent;
+          }
+
+          &:hover {
+            color: inherit;
+            background: inherit;
+          }
+
+          .img_drop_left {
+            font-size: 16px;
+            margin-right: 10px;
+            display: none;
+          }
+        }
+
+        .drop_left_a:hover .img_drop_left {
+          display: block;
+          background: none;
+        }
+      }
+    }
+  }
+}
+
+//nav section ends here
+
+.home_bg{
+  background: linear-gradient(rgba(20, 20, 20, .6),
+  rgba(20, 20, 20, .6)),
+url("../img/office.jpg"); 
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
+  padding: 30px;
+  margin-bottom: 2%;
+  background-repeat: no-repeat;
+  @include max(375px){
+   height:70vh;
+  }
+  .logo_section{
+    text-align: center;
+    h5{
+      color: white;
+      font: 40px $fr;
+      line-height: 1.5;
+      font-weight: 700;
+      margin-top: 10px;
+      @include max(991px){
+        font: 30px $fr;
+      }
+      @include max(414px){
+        margin-top: 25%;
+      }
+      @include max(360px){
+        margin-top: 25px;
+      }
+    }
+    h4{
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      font-weight: bold;
+      color: #fff;
+      padding: 40px;
+      font: 40px $fr;
+      @include max(991px){
+        font: 30px $fr;
+      }
+      @include max(375px){
+    bottom: 30%;
+      }
+    }
+  }
+  .logo_wrap{
+    display: flex;
+    margin-top: 10%;
+    .logo_abt{
+      width: 15%;
+      height: 200px;
+      @include max(991px){
+        height: 150px;
+       }
+       @include max(575px){
+        width:25%;
+       }
+    }
+    h5{
+      color: #90322b;
+    font: 25px $fr;
+    font-weight: 700;
+    padding: 50px 1px;
+    margin-left: -20px;
+    @include max(575px){
+      margin-left: 0;
+     }
+    }
+  }
+}
+//////////////////////////home ends here
+//////swiper
+
+  html, body {
+      position: relative;
+      height: 100%;
+    }
+    body {
+      background: #eee;
+      font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+      font-size: 14px;
+      color:#000;
+      margin: 0;
+      padding: 0;
+    }
+    .swiper-container {
+      width: 100%;
+      height: 100%;
+    }
+    .swiper-slide {
+      text-align: center;
+      font-size: 18px;
+      background: #fff;
+
+      /* Center slide text vertically */
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      -webkit-justify-content: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      -webkit-align-items: center;
+      align-items: center;
+    }
+.pro_swip{
+  background: linear-gradient(rgba(20, 20, 20, 0.76),
+  rgba(20, 20, 20, .6)),
+url("../img/saad-salim-PqRvLsjD_TU-unsplash.jpg"); 
+  background-size: cover;
+  padding: 5% 5%;
+  margin-bottom: 2%;
+  background-repeat: no-repeat;
+  .pro_swipe1{
+    background: url("../img/op1.jpg") center center no-repeat;
+    background-size: cover;
+    width:100%!important;
+    height: 60vh;
+    padding: 5% 0;
+    margin-bottom: 5%;
+    background-repeat: no-repeat;
+  }
+  .pro_swipe2{
+    background: url("../img/op2.jpg") center center no-repeat;
+    background-size: cover;
+    width:100%!important;
+    height: 60vh;
+    padding: 5% 0;
+    margin-bottom: 5%;
+    background-repeat: no-repeat;
+  }
+  .pro_swipe3{
+    background: url("../img/op3.jpg") center center no-repeat;
+    background-size: cover;
+    width:100%!important;
+    height: 60vh;
+    padding: 5% 0;
+    margin-bottom: 5%;
+    background-repeat: no-repeat;
+  }
+  .pro_swipe4{
+    background: url("../img/op4.jpg") center center no-repeat;
+    background-size: cover;
+    width:100%!important;
+    height: 60vh;
+    padding: 5% 0;
+    margin-bottom: 5%;
+    background-repeat: no-repeat;
+  }
+  .pro_swipe5{
+    background: url("../img/op5.jpg") center center no-repeat;
+    background-size: cover;
+    width:100%!important;
+    height: 60vh;
+    padding: 5% 0;
+    margin-bottom: 5%;
+    background-repeat: no-repeat;
+  }
+  .pro_swipe6{
+    background: url("../img/op6.jpg") center center no-repeat;
+    background-size: cover;
+    width:100%!important;
+    height: 60vh;
+    padding: 5% 0;
+    margin-bottom: 5%;
+    background-repeat: no-repeat;
+  }
+  .pro_swipe7{
+    background: url("../img/op7.jpg") center center no-repeat;
+    background-size: cover;
+    width:100%!important;
+    height: 60vh;
+    padding: 5% 0;
+    margin-bottom: 5%;
+    background-repeat: no-repeat;
+  }
+  .pro_swipe8{
+    background: url("../img/op8.jpg") center center no-repeat;
+    background-size: cover;
+    width:100%!important;
+    height: 60vh;
+    padding: 5% 0;
+    margin-bottom: 5%;
+    background-repeat: no-repeat;
+  }
+  .pro_swipe9{
+    background: url("../img/op9.jpg") center center no-repeat;
+    background-size: cover;
+    width:100%!important;
+    height: 60vh;
+    padding: 5% 0;
+    margin-bottom: 5%;
+    background-repeat: no-repeat;
+  }
+  .pro_h3{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+text-align: center;
+  
+  h3{
+    color: white;
+    font: 50px $fr;
+    font-weight: 600;
+    margin-bottom: 3%;
+    @include max(991px){
+      font: 40px $fr;
+     }
+     @include max(575px){
+      font: 30px $fr;
+     }
+  }
+  
+}
+.logo_wrap{
+  display: flex;
+  .logo_abt{
+    width: 12%;
+    height: 180px;
+    margin-top: 0;
+    @include max(991px){
+      height: 150px;
+     }
+     @include max(575px){
+      height: 125px;
+      width: 20%;
+     }
+  }
+  h5{
+    color: #90322b;
+    font: 25px $fr;
+    font-weight: 700;
+    padding: 50px 1px;
+    margin-left: -20px;
+    @include max(575px){
+      font: 20px $fr;
+      margin-left: 0;
+     }
+  }
+}
+}
+//////swiper ends here
+////////about us
+
+.about{
+  background: linear-gradient(rgba(20, 20, 20, .6),
+           rgba(20, 20, 20, .6)),
+       url("../img/elvir-k-Xtyh5b5GGX4-unsplash.jpg");
+ 
+  background-size: cover;
+  width: 100%;
+  padding: 5% 5%;
+  margin-bottom: 2%;
+  background-repeat: no-repeat;
+  .logo_wrap{
+    display: flex;
+    .logo_abt{
+      width: 12%;
+      height: 180px;
+      margin-top: 0;
+      @include max(991px){
+        height: 150px;
+       }
+       @include max(575px){
+        height: 125px;
+        width: 20%;
+       }
+    }
+    h5{
+      color: #90322b;
+      font: 25px $fr;
+      font-weight: 700;
+      padding: 50px 1px;
+      margin-left: -20px;
+      @include max(575px){
+        font: 20px $fr;
+        margin-left: 0;
+       }
+    }
+  }
+  h3{
+    color: white;
+    font: 40px $fr;
+    font-weight: 600;
+    margin-bottom: 3%;
+    text-align: center;
+    @include max(575px){
+      font: 30px $fr;
+     }
+  }
+  h4{
+    color: white;
+    line-height: 1.5;
+    font: 25px $fl;
+    text-align: justify;
+    @include max(575px){
+      padding: 10px;
+      font: 20px $fl;
+     }
+  }
+  img{
+    margin-top: 38px;
+    width: 100%;
+    height: 90%;
+    @include max(575px)
+    {
+         width: 50%;
+    height: 70%;
+     }
+  }
+}
+////////about us ends here 
+
+/////////vision
+
+.vision{
+ 
+  background: linear-gradient(rgba(20, 20, 20, .6),
+           rgba(20, 20, 20, .6)),
+       url("../img/todd-quackenbush-IClZBVw5W5A-unsplash\ \(1\).jpg");
+  background-size: cover;
+  width: 100%;
+  padding: 5% 5%;
+  margin-bottom: 2%;
+  background-repeat: no-repeat;
+  .logo_wrap{
+    display: flex;
+    .logo_abt{
+      width: 12%;
+      height: 180px;
+      margin-top: 0;
+      @include max(991px){
+        height: 150px;
+       }
+       @include max(575px){
+        height: 125px;
+        width: 20%;
+       }
+    }
+    h5{
+      color: #90322b;
+      font: 25px $fr;
+      font-weight: 700;
+      padding: 50px 1px;
+      margin-left: -20px;
+      @include max(575px){
+        font: 20px $fr;
+        margin-left: 0;
+       }
+    }
+  }
+  .img_vision{
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-left: 10px;
+    margin-right: 30px;
+    margin-bottom: 5%;
+    h2{
+      color:white;
+      font: 40px $fr;
+      font-weight: 600;
+      margin-bottom: 2%;
+      @include max(575px){
+        font: 30px $fr;
+       }
+    }
+    h3{
+      color:white;
+      font: 25px $fl;
+      line-height: 1.3;
+      border-bottom: 4px solid white;
+      padding: 20px;
+    }
+    h4{
+      color:white;
+      font: 25px $fl;
+      line-height: 1.3;
+    }
+  }
+ 
+ 
+}
+/////////vision ends here
+
+///////////////services
+.services{
+  background: linear-gradient(rgba(20, 20, 20, .6),
+  rgba(20, 20, 20, .6)),
+url("../img/rubens-nguyen-XbVFTehSdj0-unsplash.jpg");
+  
+  background-size: cover;
+  width: 100%;
+  padding: 5% 0 5% 5%;
+  margin-bottom: 2%;
+  background-repeat: no-repeat;
+  padding: 60px;
+  .logo_wrap{
+    display: flex;
+    .logo_abt{
+      width: 12%;
+      height: 180px;
+      margin-top: 0;
+      @include max(991px){
+        height: 150px;
+       }
+       @include max(575px){
+        height: 125px;
+        width: 20%;
+       }
+    }
+    h5{
+      color: #90322b;
+      font: 25px $fr;
+      font-weight: 700;
+      padding: 50px 1px;
+      margin-left: -20px;
+      @include max(575px){
+        font: 20px $fr;
+        margin-left: 0;
+       }
+    }
+  }
+  h2{
+    color: white;
+    margin-bottom: 5%;
+    font: 50px $fr;
+    font-weight: 700;
+    text-align: center;
+    @include max(767px){
+      font: 40px $fr;
+    }
+    @include max(575px){
+      font: 30px $fr;
+     }
+  }
+  // h3{
+  //   color: white;
+  //   margin-bottom: 5%;
+  //   font-size: 40px;
+  //   font-weight: 600;
+  //   @include max(767px){
+  //     font-size: 30px;
+  //   }
+  // }
+  h4{
+    color: white;
+    margin-bottom: 2%;
+    font: 25px $fr;
+    text-align: center;
+    @include max(767px){
+      font: 20px $fr;
+    }
+  }
+}
+///////////services ends here
+
+//////////contracting services
+
+.contracting{
+ 
+  background: linear-gradient(rgba(20, 20, 20, .6),
+  rgba(20, 20, 20, .6)),
+url("../img/ej-yao-D46mXLsQRJw-unsplash.jpg"); 
+  background-size: cover;
+  width: 100%;
+  padding: 5% 5%;
+  margin-bottom: 2%;
+  background-repeat: no-repeat;
+  .logo_wrap{
+    display: flex;
+    .logo_abt{
+      width: 12%;
+      height: 180px;
+      margin-top: 0;
+      @include max(991px){
+        height: 150px;
+       }
+       @include max(575px){
+        height: 125px;
+        width: 20%;
+       }
+    }
+    h5{
+      color: #90322b;
+      font: 25px $fr;
+      font-weight: 700;
+      padding: 50px 1px;
+      margin-left: -20px;
+      @include max(575px){
+        font: 20px $fr;
+        margin-left: 0;
+       }
+    }
+  }
+  h2{
+    font: 40px $fr;
+    color: white;
+    font-weight: 700;
+    margin-bottom: 2%;
+    text-align: center;
+    @include max(575px){
+      padding: 5px;
+      font: 30px $fr;
+     }
+     }
+  h4{
+    font: 22px $fl;
+    color: white;
+    line-height: 1.3;
+    margin-bottom: 2%;
+    text-align: center;
+    @include max(767px){
+      font-size: 20px;
+    }
+    @include max(575px){
+      margin-bottom: 10%;
+     }
+  }
+  .contracting_wrsp{
+    background-color: #667775db;
+    margin-bottom: 35%;
+    padding: 32px 30px 40px 30px;
+    margin-left: 10px;
+    margin-right: 30px;
+    height: 210px;
+    text-align: center;
+    @include max(767px)
+    {
+      margin-bottom: 20%;
+    }
+    i{
+      color: white;
+      margin-bottom: 7%;
+      font-size: 40px;
+      &::before{
+        font-size: 40px!important;
+        margin-bottom: 7%;
+      }
+    }
+    h3{
+      color: white;
+      margin-bottom: 5%;
+      font: 20px $fr;
+      margin-top: 5%;
+    }
+    p{
+      color: white;
+      margin-bottom: 5%;
+      font: 15px $fr;
+      line-height: 1.3;
+    }
+  }
+}
+//////contracting services ends here
+
+////////sectors
+.sector{
+  background: url("../img/gallery_img_2.jpg") center center no-repeat;
+  background-size: cover;
+  width: 100%;
+  margin-bottom: 2%;
+  background-repeat: no-repeat;
+  .logo_wrap{
+    display: flex;
+    .logo_abt{
+      width: 12%;
+      height: 180px;
+      margin-top: 0;
+      @include max(991px){
+        height: 150px;
+       }
+       @include max(575px){
+        height: 125px;
+        width: 20%;
+       }
+    }
+    h5{
+      color: #90322b;
+      font: 25px $fr;
+      font-weight: 700;
+      padding: 50px 1px;
+      margin-left: -20px;
+      @include max(575px){
+        font: 20px $fr;
+        margin-left: 0;
+       }
+    }
+  }
+  .sector_wrap{    
+    height: 30vh;
+  }
+  .sector_wrap1{
+text-align: center;
+background-color: white;
+padding: 30px 30px 0px 30px;
+h4{
+  color:black;
+  font: 30px $fr;
+    font-weight: 500;
+    margin-bottom: 3%;
+    @include max(767px){
+      font: 20px $fr;
+    }
+}
+h2{
+  color:black;
+  margin-bottom: 3%;
+  font: 40px $fr;
+  font-weight:700 ;
+}
+
+.sector_sec{
+  text-align: center;
+  margin-bottom: 45%;
+  @include max(992px){
+    margin-bottom: 20%;
+   }
+img{
+  margin-bottom: 5%;
+}
+  h3{
+    color:black;
+  }
+}
+  }
+  i{
+    color: #03A9F4;
+    font-size: 50px;
+    margin-bottom: 10%;
+  }
+}
+////////sectors ends here
+
+////////intro
+
+.intro{
+  background: url("../img/Main-image_11.jpg") center center no-repeat;
+  background-size: cover;
+  width: 100%;
+  height:100vh;
+  margin-bottom: 2%;
+  background-repeat: no-repeat;
+  padding: 30px;
+  .logo_wrap{
+    display: flex;
+    .logo_abt{
+      width: 12%;
+      height: 180px;
+      margin-top: 0;
+      @include max(991px){    
+        height: 150px;
+       }
+       @include max(575px){
+        height: 125px;
+        width: 20%;
+       }
+    }
+    h5{
+      color: #90322b;
+      font: 25px $fr;
+      font-weight: 700;
+      padding: 50px 1px;
+      margin-left: -20px;
+      @include max(575px){
+        font: 20px $fr;
+        margin-left: 0;
+       }
+    }
+  }
+  p{
+    line-height: 1.5;
+    font: 25px $fr;
+  }
+}
+//////intro ends here
+////////////////////projects
+.project{
+  background: linear-gradient(rgba(20, 20, 20, .6),
+  rgba(20, 20, 20, .6)),
+url("../img/the-milon-oNpC2mo0An0-unsplash.jpg");
+background-size: cover;
+  width: 100%;
+  background-repeat: no-repeat;
+  margin-bottom: 2%;
+  padding: 40px;
+  .logo_wrap{
+    display: flex;
+    .logo_abt{
+      width: 12%;
+      height: 180px;
+      margin-top: 0;
+      @include max(991px){     
+        height: 150px;
+       }
+       @include max(575px){
+        height: 125px;
+        width: 20%;
+       }
+    }
+    h5{
+      color: #90322b;
+      font: 25px $fr;
+      font-weight: 700;
+      padding: 50px 1px;
+      margin-left: -20px;
+      @include max(575px){
+        font: 20px $fr;
+        margin-left: 0;
+       }
+    }
+  }
+  h3{
+    font: 30px $fr;
+    margin-bottom: 2%;
+    text-align: center;
+    :hover{
+      color:white;
+      text-decoration: none;
+    }
+  }
+  h4{
+    color:white;
+    font: 40px $fs;
+    margin-bottom: 2%;
+    text-align: center;
+    @include max(575px){
+      font: 30px $fr;
+     }
+  }
+  h5{
+    color:white;
+    font: 25px $fr;
+    margin-bottom: 2%;
+    @include max(575px){
+      font: 20px $fr;
+      margin-left: 0;
+     }
+  }
+}
+
+/////////////projects ends here
+///contact
+.contact{
+  background: linear-gradient(rgba(20, 20, 20, .6),
+  rgba(20, 20, 20, .6)),
+url("../img/etienne-girardet-sgYamIzhAhg-unsplash.jpg");
+  
+  background-size: cover;
+  width: 100%;
+  background-repeat: no-repeat;
+  padding: 40px;
+  .logo_wrap{
+    display: flex;
+    .logo_abt{
+      width: 12%;
+      height: 180px;
+      margin-top: 0;
+      @include max(991px){      
+        height: 150px;
+       }
+       @include max(575px){
+        height: 125px;
+        width: 20%;
+       }
+    }
+    h5{
+      color: #90322b;
+      font: 25px $fr;
+      font-weight: 700;
+      padding: 50px 1px;
+      margin-left: -20px;
+      @include max(575px){
+        font: 20px $fr;
+        margin-left: 0;
+       }
+    }
+  }
+  
+  h2{
+    color: white;
+    font: 50px $fr;
+    margin-bottom: 5%;
+    text-align: center;
+    @include max(767px){
+      font-size: 40px;
+    }
+    @include max(575px){
+      font: 30px $fr;
+    }
+  }
+  h3{
+    color: white;
+    font: 30px $fr;
+    margin-bottom: 2%;
+    text-align: center;
+    list-style-type: none;
+    @include max(767px){
+      font-size: 20px;
+    }
+    :hover{
+      color:white;
+     text-decoration: none;
+    }
+  }
+}
+///contact ends here
