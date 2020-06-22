@@ -2110,8 +2110,8 @@ body {
 }
 
 .contact {
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(20, 20, 20, 0.6)), to(rgba(20, 20, 20, 0.6))), url("../img/etienne-girardet-sgYamIzhAhg-unsplash1.jpg");
-  background: linear-gradient(rgba(20, 20, 20, 0.6), rgba(20, 20, 20, 0.6)), url("../img/etienne-girardet-sgYamIzhAhg-unsplash1.jpg");
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(20, 20, 20, 0.6)), to(rgba(20, 20, 20, 0.6))), url("../img/etienne-girardet-sgYamIzhAhg-unsplash.jpg");
+  background: linear-gradient(rgba(20, 20, 20, 0.6), rgba(20, 20, 20, 0.6)), url("../img/etienne-girardet-sgYamIzhAhg-unsplash.jpg");
   background-size: cover;
   width: 100%;
   background-repeat: no-repeat;
