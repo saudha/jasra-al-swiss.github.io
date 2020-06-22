@@ -127,13 +127,16 @@ html {
 .home_bg{
   background: linear-gradient(rgba(20, 20, 20, .6),
   rgba(20, 20, 20, .6)),
-url("../img/office.jpg"); 
+url("../img/officer.jpg"); 
   background-size: cover;
   width: 100%;
   height: 100vh;
   padding: 30px;
   margin-bottom: 2%;
   background-repeat: no-repeat;
+  @include max(767px){
+    padding: 10px;
+   }
   @include max(375px){
    height:70vh;
   }
@@ -150,6 +153,9 @@ url("../img/office.jpg");
       }
       @include max(414px){
         margin-top: 25%;
+      }
+      @include max(375px){
+        margin-top: 10%;
       }
       @include max(360px){
         margin-top: 25px;
@@ -173,7 +179,10 @@ url("../img/office.jpg");
   }
   .logo_wrap{
     display: flex;
-    margin-top: 10%;
+    margin-top: 5%;
+    @include max(991px){
+      margin-top: 10%;
+     }
     .logo_abt{
       width: 15%;
       height: 200px;
@@ -239,7 +248,7 @@ url("../img/office.jpg");
   rgba(20, 20, 20, .6)),
 url("../img/saad-salim-PqRvLsjD_TU-unsplash.jpg"); 
   background-size: cover;
-  padding: 5% 5%;
+  padding: 2% 5%;
   margin-bottom: 2%;
   background-repeat: no-repeat;
   .pro_swipe1{
@@ -247,7 +256,7 @@ url("../img/saad-salim-PqRvLsjD_TU-unsplash.jpg");
     background-size: cover;
     width:100%!important;
     height: 60vh;
-    padding: 5% 0;
+    padding: 2% 0;
     margin-bottom: 5%;
     background-repeat: no-repeat;
   }
@@ -376,11 +385,11 @@ text-align: center;
 .about{
   background: linear-gradient(rgba(20, 20, 20, .6),
            rgba(20, 20, 20, .6)),
-       url("../img/elvir-k-Xtyh5b5GGX4-unsplash.jpg");
+       url("../img/elvir-k-Xtyh5b5GGX4-unsplas2.jpg");
  
   background-size: cover;
   width: 100%;
-  padding: 5% 5%;
+  padding: 2% 5% 5% 5%;
   margin-bottom: 2%;
   background-repeat: no-repeat;
   .logo_wrap{
@@ -433,7 +442,7 @@ text-align: center;
     margin-top: 38px;
     width: 100%;
     height: 90%;
-    @include max(575px)
+    @include max(767px)
     {
          width: 50%;
     height: 70%;
@@ -451,7 +460,7 @@ text-align: center;
        url("../img/todd-quackenbush-IClZBVw5W5A-unsplash\ \(1\).jpg");
   background-size: cover;
   width: 100%;
-  padding: 5% 5%;
+  padding: 2% 5%;
   margin-bottom: 2%;
   background-repeat: no-repeat;
   .logo_wrap{
@@ -522,10 +531,9 @@ url("../img/rubens-nguyen-XbVFTehSdj0-unsplash.jpg");
   
   background-size: cover;
   width: 100%;
-  padding: 5% 0 5% 5%;
+  padding: 2% 5%;
   margin-bottom: 2%;
   background-repeat: no-repeat;
-  padding: 60px;
   .logo_wrap{
     display: flex;
     .logo_abt{
@@ -595,7 +603,7 @@ url("../img/rubens-nguyen-XbVFTehSdj0-unsplash.jpg");
 url("../img/ej-yao-D46mXLsQRJw-unsplash.jpg"); 
   background-size: cover;
   width: 100%;
-  padding: 5% 5%;
+  padding: 2% 5%;
   margin-bottom: 2%;
   background-repeat: no-repeat;
   .logo_wrap{
@@ -692,6 +700,7 @@ url("../img/ej-yao-D46mXLsQRJw-unsplash.jpg");
   width: 100%;
   margin-bottom: 2%;
   background-repeat: no-repeat;
+  padding:2% 5%;
   .logo_wrap{
     display: flex;
     .logo_abt{
@@ -772,7 +781,7 @@ img{
   height:100vh;
   margin-bottom: 2%;
   background-repeat: no-repeat;
-  padding: 30px;
+  padding: 2% 5%;
   .logo_wrap{
     display: flex;
     .logo_abt{
@@ -814,7 +823,7 @@ background-size: cover;
   width: 100%;
   background-repeat: no-repeat;
   margin-bottom: 2%;
-  padding: 40px;
+  padding: 2% 5%;
   .logo_wrap{
     display: flex;
     .logo_abt{
@@ -875,12 +884,12 @@ background-size: cover;
 .contact{
   background: linear-gradient(rgba(20, 20, 20, .6),
   rgba(20, 20, 20, .6)),
-url("../img/etienne-girardet-sgYamIzhAhg-unsplash.jpg");
+url("../img/etienne-girardet-sgYamIzhAhg-unsplash1.jpg");
   
   background-size: cover;
   width: 100%;
   background-repeat: no-repeat;
-  padding: 40px;
+  padding: 2% 5%;
   .logo_wrap{
     display: flex;
     .logo_abt{
